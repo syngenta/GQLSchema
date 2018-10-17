@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GQLSchema'
-  s.version          = '0.0.1'
+  s.version          = `git describe --abbrev=0 --tags`
   s.summary          = 'Classes for GraphQL schema'
 
   s.description      = 'Classes for GraphQL schema, works with "GQLSchemaGenerator"'
