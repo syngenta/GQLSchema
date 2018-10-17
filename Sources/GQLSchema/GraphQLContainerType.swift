@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol GraphQLContainerType: class, GraphQLReferenceType {
+public protocol GraphQLContainerType: GraphQLReferenceType {
     var _children:   [GraphQLReferenceType]  { get set }
     var _parameters: [GraphQLParameter]      { get }
     
@@ -20,11 +20,11 @@ extension GraphQLContainerType {
     // ----------------------------------
     //  MARK: - Children -
     //
-    func _add(child: GraphQLReferenceType) throws {
+    public func _add(child: GraphQLReferenceType) throws {
         try _add(children: [child])
     }
     
-    func _add(children: [GraphQLReferenceType]) throws {
+    public func _add(children: [GraphQLReferenceType]) throws {
         if !children.isEmpty {
             children.forEach {
                 $0._parent = self

@@ -15,4 +15,10 @@ public struct GraphQLQuery {
     public let queryType: QueryType
     public let body: String
     public let fragmentBody: String?
+    
+    public init(queryType: QueryType, body: String, fragmentBody: String?) {
+        self.queryType = queryType
+        self.body = body
+        self.fragmentBody = fragmentBody
+    }
 }

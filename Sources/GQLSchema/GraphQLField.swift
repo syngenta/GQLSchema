@@ -12,7 +12,7 @@ enum GraphQLFieldError: Error {
     case InvalidSyntax(String)
 }
 
-public class GraphQLField: GraphQLContainerType {
+open class GraphQLField: GraphQLContainerType {
     
     public var _name:       String
     public var _alias:      String?

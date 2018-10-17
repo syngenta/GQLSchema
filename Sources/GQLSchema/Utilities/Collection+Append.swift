@@ -8,10 +8,10 @@
 
 import Foundation
 
-func +=<T>(lhs: inout [T], rhs: T) {
+public func +=<T>(lhs: inout [T], rhs: T) {
     lhs.append(rhs)
 }
 
-func +=<T>(lhs: inout [T], rhs: [T]) {
+public func +=<T>(lhs: inout [T], rhs: [T]) {
     lhs.append(contentsOf: rhs)
 }
