@@ -1,0 +1,580 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		"GQLSchema::GQLSchemaPackageTests::ProductTarget" /* GQLSchemaPackageTests */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = OBJ_55 /* Build configuration list for PBXAggregateTarget "GQLSchemaPackageTests" */;
+			buildPhases = (
+			);
+			dependencies = (
+				OBJ_58 /* PBXTargetDependency */,
+			);
+			name = GQLSchemaPackageTests;
+			productName = GQLSchemaPackageTests;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		15552F1C2177520300305CF1 /* GraphQL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15552F1B2177520300305CF1 /* GraphQL.swift */; };
+		15552F1E217752A000305CF1 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15552F1D217752A000305CF1 /* Environment.swift */; };
+		15552F27217753DE00305CF1 /* TypedFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15552F1F217753DD00305CF1 /* TypedFieldTests.swift */; };
+		15552F28217753DE00305CF1 /* InlineFragmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15552F20217753DD00305CF1 /* InlineFragmentTests.swift */; };
+		15552F29217753DE00305CF1 /* ValueTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15552F21217753DD00305CF1 /* ValueTypeTests.swift */; };
+		15552F2A217753DE00305CF1 /* ContainerTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15552F22217753DD00305CF1 /* ContainerTypeTests.swift */; };
+		15552F2B217753DE00305CF1 /* ParameterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15552F23217753DD00305CF1 /* ParameterTests.swift */; };
+		15552F2C217753DE00305CF1 /* InputTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15552F24217753DD00305CF1 /* InputTypeTests.swift */; };
+		15552F2D217753DE00305CF1 /* ReferenceTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15552F25217753DE00305CF1 /* ReferenceTypeTests.swift */; };
+		15552F2E217753DE00305CF1 /* FieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15552F26217753DE00305CF1 /* FieldTests.swift */; };
+		15552F312177546300305CF1 /* String+Newline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15552F302177546300305CF1 /* String+Newline.swift */; };
+		15552F33217754BA00305CF1 /* Collection+Append.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15552F32217754BA00305CF1 /* Collection+Append.swift */; };
+		15552F35217758EC00305CF1 /* FragmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15552F34217758EC00305CF1 /* FragmentTests.swift */; };
+		15552F372177644A00305CF1 /* PredicatesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15552F362177644A00305CF1 /* PredicatesTests.swift */; };
+		15552F39217769C300305CF1 /* OrdersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15552F38217769C300305CF1 /* OrdersTests.swift */; };
+		OBJ_34 /* GraphQLContainerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* GraphQLContainerType.swift */; };
+		OBJ_35 /* GraphQLField.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* GraphQLField.swift */; };
+		OBJ_36 /* GraphQLFragment.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* GraphQLFragment.swift */; };
+		OBJ_37 /* GraphQLInlineFragment.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* GraphQLInlineFragment.swift */; };
+		OBJ_38 /* GraphQLInputType.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* GraphQLInputType.swift */; };
+		OBJ_39 /* GraphQLOrders.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* GraphQLOrders.swift */; };
+		OBJ_40 /* GraphQLParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* GraphQLParameter.swift */; };
+		OBJ_41 /* GraphQLPredicates.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* GraphQLPredicates.swift */; };
+		OBJ_42 /* GraphQLQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* GraphQLQuery.swift */; };
+		OBJ_43 /* GraphQLReferenceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* GraphQLReferenceType.swift */; };
+		OBJ_44 /* GraphQLScalarType.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* GraphQLScalarType.swift */; };
+		OBJ_45 /* GraphQLTypedField.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* GraphQLTypedField.swift */; };
+		OBJ_46 /* GraphQLValueType.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* GraphQLValueType.swift */; };
+		OBJ_53 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+		OBJ_65 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* XCTestManifests.swift */; };
+		OBJ_67 /* GQLSchema.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "GQLSchema::GQLSchema::Product" /* GQLSchema.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		15552F192177512000305CF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "GQLSchema::GQLSchema";
+			remoteInfo = GQLSchema;
+		};
+		15552F1A2177512100305CF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "GQLSchema::GQLSchemaTests";
+			remoteInfo = GQLSchemaTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		15552F1B2177520300305CF1 /* GraphQL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphQL.swift; sourceTree = "<group>"; };
+		15552F1D217752A000305CF1 /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		15552F1F217753DD00305CF1 /* TypedFieldTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypedFieldTests.swift; sourceTree = "<group>"; };
+		15552F20217753DD00305CF1 /* InlineFragmentTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InlineFragmentTests.swift; sourceTree = "<group>"; };
+		15552F21217753DD00305CF1 /* ValueTypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueTypeTests.swift; sourceTree = "<group>"; };
+		15552F22217753DD00305CF1 /* ContainerTypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerTypeTests.swift; sourceTree = "<group>"; };
+		15552F23217753DD00305CF1 /* ParameterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterTests.swift; sourceTree = "<group>"; };
+		15552F24217753DD00305CF1 /* InputTypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputTypeTests.swift; sourceTree = "<group>"; };
+		15552F25217753DE00305CF1 /* ReferenceTypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReferenceTypeTests.swift; sourceTree = "<group>"; };
+		15552F26217753DE00305CF1 /* FieldTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldTests.swift; sourceTree = "<group>"; };
+		15552F302177546300305CF1 /* String+Newline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Newline.swift"; sourceTree = "<group>"; };
+		15552F32217754BA00305CF1 /* Collection+Append.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+Append.swift"; sourceTree = "<group>"; };
+		15552F34217758EC00305CF1 /* FragmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FragmentTests.swift; sourceTree = "<group>"; };
+		15552F362177644A00305CF1 /* PredicatesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredicatesTests.swift; sourceTree = "<group>"; };
+		15552F38217769C300305CF1 /* OrdersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersTests.swift; sourceTree = "<group>"; };
+		"GQLSchema::GQLSchema::Product" /* GQLSchema.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GQLSchema.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"GQLSchema::GQLSchemaTests::Product" /* GQLSchemaTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = GQLSchemaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_10 /* GraphQLField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLField.swift; sourceTree = "<group>"; };
+		OBJ_11 /* GraphQLFragment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLFragment.swift; sourceTree = "<group>"; };
+		OBJ_12 /* GraphQLInlineFragment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLInlineFragment.swift; sourceTree = "<group>"; };
+		OBJ_13 /* GraphQLInputType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLInputType.swift; sourceTree = "<group>"; };
+		OBJ_14 /* GraphQLOrders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLOrders.swift; sourceTree = "<group>"; };
+		OBJ_15 /* GraphQLParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLParameter.swift; sourceTree = "<group>"; };
+		OBJ_16 /* GraphQLPredicates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLPredicates.swift; sourceTree = "<group>"; };
+		OBJ_17 /* GraphQLQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLQuery.swift; sourceTree = "<group>"; };
+		OBJ_18 /* GraphQLReferenceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLReferenceType.swift; sourceTree = "<group>"; };
+		OBJ_19 /* GraphQLScalarType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLScalarType.swift; sourceTree = "<group>"; };
+		OBJ_20 /* GraphQLTypedField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLTypedField.swift; sourceTree = "<group>"; };
+		OBJ_21 /* GraphQLValueType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLValueType.swift; sourceTree = "<group>"; };
+		OBJ_25 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
+		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		OBJ_9 /* GraphQLContainerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLContainerType.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		OBJ_47 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_67 /* GQLSchema.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		15552F2F2177544E00305CF1 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				15552F32217754BA00305CF1 /* Collection+Append.swift */,
+				15552F302177546300305CF1 /* String+Newline.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		OBJ_22 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_23 /* GQLSchemaTests */,
+			);
+			name = Tests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_23 /* GQLSchemaTests */ = {
+			isa = PBXGroup;
+			children = (
+				15552F2F2177544E00305CF1 /* Utilities */,
+				15552F22217753DD00305CF1 /* ContainerTypeTests.swift */,
+				15552F26217753DE00305CF1 /* FieldTests.swift */,
+				15552F20217753DD00305CF1 /* InlineFragmentTests.swift */,
+				15552F24217753DD00305CF1 /* InputTypeTests.swift */,
+				15552F23217753DD00305CF1 /* ParameterTests.swift */,
+				15552F25217753DE00305CF1 /* ReferenceTypeTests.swift */,
+				15552F1F217753DD00305CF1 /* TypedFieldTests.swift */,
+				15552F21217753DD00305CF1 /* ValueTypeTests.swift */,
+				15552F34217758EC00305CF1 /* FragmentTests.swift */,
+				15552F362177644A00305CF1 /* PredicatesTests.swift */,
+				15552F38217769C300305CF1 /* OrdersTests.swift */,
+				OBJ_25 /* XCTestManifests.swift */,
+			);
+			name = GQLSchemaTests;
+			path = Tests/GQLSchemaTests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_26 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				"GQLSchema::GQLSchemaTests::Product" /* GQLSchemaTests.xctest */,
+				"GQLSchema::GQLSchema::Product" /* GQLSchema.framework */,
+			);
+			name = Products;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		OBJ_5 /*  */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_6 /* Package.swift */,
+				OBJ_7 /* Sources */,
+				OBJ_22 /* Tests */,
+				OBJ_26 /* Products */,
+			);
+			name = "";
+			sourceTree = "<group>";
+		};
+		OBJ_7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_8 /* GQLSchema */,
+			);
+			name = Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_8 /* GQLSchema */ = {
+			isa = PBXGroup;
+			children = (
+				15552F1D217752A000305CF1 /* Environment.swift */,
+				15552F1B2177520300305CF1 /* GraphQL.swift */,
+				OBJ_9 /* GraphQLContainerType.swift */,
+				OBJ_10 /* GraphQLField.swift */,
+				OBJ_11 /* GraphQLFragment.swift */,
+				OBJ_12 /* GraphQLInlineFragment.swift */,
+				OBJ_13 /* GraphQLInputType.swift */,
+				OBJ_14 /* GraphQLOrders.swift */,
+				OBJ_15 /* GraphQLParameter.swift */,
+				OBJ_16 /* GraphQLPredicates.swift */,
+				OBJ_17 /* GraphQLQuery.swift */,
+				OBJ_18 /* GraphQLReferenceType.swift */,
+				OBJ_19 /* GraphQLScalarType.swift */,
+				OBJ_20 /* GraphQLTypedField.swift */,
+				OBJ_21 /* GraphQLValueType.swift */,
+			);
+			name = GQLSchema;
+			path = Sources/GQLSchema;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		"GQLSchema::GQLSchema" /* GQLSchema */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_30 /* Build configuration list for PBXNativeTarget "GQLSchema" */;
+			buildPhases = (
+				OBJ_33 /* Sources */,
+				OBJ_47 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GQLSchema;
+			productName = GQLSchema;
+			productReference = "GQLSchema::GQLSchema::Product" /* GQLSchema.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"GQLSchema::GQLSchemaTests" /* GQLSchemaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_60 /* Build configuration list for PBXNativeTarget "GQLSchemaTests" */;
+			buildPhases = (
+				OBJ_63 /* Sources */,
+				OBJ_66 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_68 /* PBXTargetDependency */,
+			);
+			name = GQLSchemaTests;
+			productName = GQLSchemaTests;
+			productReference = "GQLSchema::GQLSchemaTests::Product" /* GQLSchemaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		"GQLSchema::SwiftPMPackageDescription" /* GQLSchemaPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_49 /* Build configuration list for PBXNativeTarget "GQLSchemaPackageDescription" */;
+			buildPhases = (
+				OBJ_52 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GQLSchemaPackageDescription;
+			productName = GQLSchemaPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		OBJ_1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 9999;
+			};
+			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "GQLSchema" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = OBJ_5 /*  */;
+			productRefGroup = OBJ_26 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				"GQLSchema::GQLSchema" /* GQLSchema */,
+				"GQLSchema::SwiftPMPackageDescription" /* GQLSchemaPackageDescription */,
+				"GQLSchema::GQLSchemaPackageTests::ProductTarget" /* GQLSchemaPackageTests */,
+				"GQLSchema::GQLSchemaTests" /* GQLSchemaTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		OBJ_33 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_34 /* GraphQLContainerType.swift in Sources */,
+				OBJ_35 /* GraphQLField.swift in Sources */,
+				OBJ_36 /* GraphQLFragment.swift in Sources */,
+				OBJ_37 /* GraphQLInlineFragment.swift in Sources */,
+				15552F1E217752A000305CF1 /* Environment.swift in Sources */,
+				OBJ_38 /* GraphQLInputType.swift in Sources */,
+				OBJ_39 /* GraphQLOrders.swift in Sources */,
+				OBJ_40 /* GraphQLParameter.swift in Sources */,
+				15552F1C2177520300305CF1 /* GraphQL.swift in Sources */,
+				OBJ_41 /* GraphQLPredicates.swift in Sources */,
+				OBJ_42 /* GraphQLQuery.swift in Sources */,
+				OBJ_43 /* GraphQLReferenceType.swift in Sources */,
+				OBJ_44 /* GraphQLScalarType.swift in Sources */,
+				OBJ_45 /* GraphQLTypedField.swift in Sources */,
+				OBJ_46 /* GraphQLValueType.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_52 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_53 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_63 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				15552F2E217753DE00305CF1 /* FieldTests.swift in Sources */,
+				15552F33217754BA00305CF1 /* Collection+Append.swift in Sources */,
+				15552F27217753DE00305CF1 /* TypedFieldTests.swift in Sources */,
+				15552F29217753DE00305CF1 /* ValueTypeTests.swift in Sources */,
+				15552F28217753DE00305CF1 /* InlineFragmentTests.swift in Sources */,
+				15552F2C217753DE00305CF1 /* InputTypeTests.swift in Sources */,
+				15552F312177546300305CF1 /* String+Newline.swift in Sources */,
+				OBJ_65 /* XCTestManifests.swift in Sources */,
+				15552F39217769C300305CF1 /* OrdersTests.swift in Sources */,
+				15552F2B217753DE00305CF1 /* ParameterTests.swift in Sources */,
+				15552F35217758EC00305CF1 /* FragmentTests.swift in Sources */,
+				15552F372177644A00305CF1 /* PredicatesTests.swift in Sources */,
+				15552F2A217753DE00305CF1 /* ContainerTypeTests.swift in Sources */,
+				15552F2D217753DE00305CF1 /* ReferenceTypeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		OBJ_58 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "GQLSchema::GQLSchemaTests" /* GQLSchemaTests */;
+			targetProxy = 15552F1A2177512100305CF1 /* PBXContainerItemProxy */;
+		};
+		OBJ_68 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "GQLSchema::GQLSchema" /* GQLSchema */;
+			targetProxy = 15552F192177512000305CF1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		OBJ_3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "-DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "SWIFT_PACKAGE DEBUG";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USE_HEADERMAP = NO;
+			};
+			name = Debug;
+		};
+		OBJ_31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = GQLSchema.xcodeproj/GQLSchema_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = GQLSchema;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = GQLSchema;
+			};
+			name = Debug;
+		};
+		OBJ_32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = GQLSchema.xcodeproj/GQLSchema_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = GQLSchema;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = GQLSchema;
+			};
+			name = Release;
+		};
+		OBJ_4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_OPTIMIZATION_LEVEL = s;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_SWIFT_FLAGS = "-DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				USE_HEADERMAP = NO;
+			};
+			name = Release;
+		};
+		OBJ_50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4.2 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		OBJ_51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4.2 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+		OBJ_56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		OBJ_57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		OBJ_61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = GQLSchema.xcodeproj/GQLSchemaTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = GQLSchemaTests;
+			};
+			name = Debug;
+		};
+		OBJ_62 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = GQLSchema.xcodeproj/GQLSchemaTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = GQLSchemaTests;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		OBJ_2 /* Build configuration list for PBXProject "GQLSchema" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_3 /* Debug */,
+				OBJ_4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_30 /* Build configuration list for PBXNativeTarget "GQLSchema" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_31 /* Debug */,
+				OBJ_32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_49 /* Build configuration list for PBXNativeTarget "GQLSchemaPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_50 /* Debug */,
+				OBJ_51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_55 /* Build configuration list for PBXAggregateTarget "GQLSchemaPackageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_56 /* Debug */,
+				OBJ_57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_60 /* Build configuration list for PBXNativeTarget "GQLSchemaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_61 /* Debug */,
+				OBJ_62 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = OBJ_1 /* Project object */;
+}
