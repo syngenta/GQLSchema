@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class GraphQLTypedField: GraphQLField {
+open class GraphQLTypedField: GraphQLField {
 
     // ----------------------------------
     //  MARK: - Init -

@@ -8,19 +8,19 @@
 
 import Foundation
 
-final class GraphQLInlineFragment: GraphQLContainerType {
+public final class GraphQLInlineFragment: GraphQLContainerType {
     
-    var _name:          String
-    var _typeCondition: String
-    var _parameters:    [GraphQLParameter]
+    public var _name:          String
+    public var _typeCondition: String
+    public var _parameters:    [GraphQLParameter]
     
-    var _parent:        GraphQLContainerType?
-    var _children:      [GraphQLReferenceType] = []
+    public var _parent:        GraphQLContainerType?
+    public var _children:      [GraphQLReferenceType] = []
     
     // ----------------------------------
     //  MARK: - Init -
     //
-    init(type: String, children: [GraphQLReferenceType]? = nil) {
+    public init(type: String, children: [GraphQLReferenceType]? = nil) {
         self._name          = ""
         self._typeCondition = type
         self._parameters    = []
@@ -33,7 +33,7 @@ final class GraphQLInlineFragment: GraphQLContainerType {
     // ----------------------------------
     //  MARK: - GraphQLValueType -
     //
-    var _graphQLFormat: String {
+    public var _graphQLFormat: String {
         var string = "\(self._indent)... on \(self._typeCondition)"
         
         if !self._children.isEmpty {

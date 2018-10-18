@@ -3,7 +3,7 @@
 //  Gryphin-MacOS
 //
 //  Created by Evgeny Kalashnikov on 10/15/18.
-//  Copyright © 2018 Dima Bart. All rights reserved.
+//  Copyright © 2018 Evgeny Kalashnikov. All rights reserved.
 //
 
 public protocol GraphQLOrderableFeilds {

@@ -21,30 +21,30 @@ public struct GraphQLParameter: GraphQLValueType {
         self._value = finalValue
     }
     
-    init(name: String, value: GraphQLValueType) {
+    public init(name: String, value: GraphQLValueType) {
         self.init(name: name, finalValue: value._graphQLFormat)
     }
     
-    init(name: String, value: [GraphQLValueType]) {
+    public init(name: String, value: [GraphQLValueType]) {
         let values      = value.map { $0._graphQLFormat }
         let valueString = values.joined(separator: ", ")
         
         self.init(name: name, finalValue: "[\(valueString)]")
     }
     
-    init(name: String, value: GraphQLScalarType) {
+    public init(name: String, value: GraphQLScalarType) {
         self.init(name: name, value: value.string)
     }
     
-    init(name: String, value: [GraphQLScalarType]) {
+    public init(name: String, value: [GraphQLScalarType]) {
         self.init(name: name, value: value.map { $0.string })
     }
     
-    init<T>(name: String, value: T) where T: RawRepresentable, T.RawValue == String {
+    public init<T>(name: String, value: T) where T: RawRepresentable, T.RawValue == String {
         self.init(name: name, finalValue: value.rawValue)
     }
     
-    init<T>(name: String, value: [T]) where T: RawRepresentable, T.RawValue == String {
+    public init<T>(name: String, value: [T]) where T: RawRepresentable, T.RawValue == String {
         let values      = value.map { $0.rawValue }
         let valueString = values.joined(separator: ", ")
         

@@ -36,6 +36,7 @@
 		15552F35217758EC00305CF1 /* FragmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15552F34217758EC00305CF1 /* FragmentTests.swift */; };
 		15552F372177644A00305CF1 /* PredicatesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15552F362177644A00305CF1 /* PredicatesTests.swift */; };
 		15552F39217769C300305CF1 /* OrdersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15552F38217769C300305CF1 /* OrdersTests.swift */; };
+		15684DC22178924300AA0AF7 /* GraphQLOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15684DC12178924300AA0AF7 /* GraphQLOperationTests.swift */; };
 		OBJ_34 /* GraphQLContainerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* GraphQLContainerType.swift */; };
 		OBJ_35 /* GraphQLField.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* GraphQLField.swift */; };
 		OBJ_36 /* GraphQLFragment.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* GraphQLFragment.swift */; };
@@ -44,7 +45,7 @@
 		OBJ_39 /* GraphQLOrders.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* GraphQLOrders.swift */; };
 		OBJ_40 /* GraphQLParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* GraphQLParameter.swift */; };
 		OBJ_41 /* GraphQLPredicates.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* GraphQLPredicates.swift */; };
-		OBJ_42 /* GraphQLQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* GraphQLQuery.swift */; };
+		OBJ_42 /* GraphQLOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* GraphQLOperation.swift */; };
 		OBJ_43 /* GraphQLReferenceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* GraphQLReferenceType.swift */; };
 		OBJ_44 /* GraphQLScalarType.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* GraphQLScalarType.swift */; };
 		OBJ_45 /* GraphQLTypedField.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* GraphQLTypedField.swift */; };
@@ -87,6 +88,7 @@
 		15552F34217758EC00305CF1 /* FragmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FragmentTests.swift; sourceTree = "<group>"; };
 		15552F362177644A00305CF1 /* PredicatesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredicatesTests.swift; sourceTree = "<group>"; };
 		15552F38217769C300305CF1 /* OrdersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersTests.swift; sourceTree = "<group>"; };
+		15684DC12178924300AA0AF7 /* GraphQLOperationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLOperationTests.swift; sourceTree = "<group>"; };
 		"GQLSchema::GQLSchema::Product" /* GQLSchema.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GQLSchema.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"GQLSchema::GQLSchemaTests::Product" /* GQLSchemaTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = GQLSchemaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_10 /* GraphQLField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLField.swift; sourceTree = "<group>"; };
@@ -96,7 +98,7 @@
 		OBJ_14 /* GraphQLOrders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLOrders.swift; sourceTree = "<group>"; };
 		OBJ_15 /* GraphQLParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLParameter.swift; sourceTree = "<group>"; };
 		OBJ_16 /* GraphQLPredicates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLPredicates.swift; sourceTree = "<group>"; };
-		OBJ_17 /* GraphQLQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLQuery.swift; sourceTree = "<group>"; };
+		OBJ_17 /* GraphQLOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLOperation.swift; sourceTree = "<group>"; };
 		OBJ_18 /* GraphQLReferenceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLReferenceType.swift; sourceTree = "<group>"; };
 		OBJ_19 /* GraphQLScalarType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLScalarType.swift; sourceTree = "<group>"; };
 		OBJ_20 /* GraphQLTypedField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLTypedField.swift; sourceTree = "<group>"; };
@@ -128,8 +130,15 @@
 		15552F2F2177544E00305CF1 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				15552F32217754BA00305CF1 /* Collection+Append.swift */,
 				15552F302177546300305CF1 /* String+Newline.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		15552F4D21779C2F00305CF1 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				15552F32217754BA00305CF1 /* Collection+Append.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -157,6 +166,7 @@
 				15552F34217758EC00305CF1 /* FragmentTests.swift */,
 				15552F362177644A00305CF1 /* PredicatesTests.swift */,
 				15552F38217769C300305CF1 /* OrdersTests.swift */,
+				15684DC12178924300AA0AF7 /* GraphQLOperationTests.swift */,
 				OBJ_25 /* XCTestManifests.swift */,
 			);
 			name = GQLSchemaTests;
@@ -172,7 +182,7 @@
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -180,7 +190,6 @@
 				OBJ_22 /* Tests */,
 				OBJ_26 /* Products */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_7 /* Sources */ = {
@@ -194,6 +203,7 @@
 		OBJ_8 /* GQLSchema */ = {
 			isa = PBXGroup;
 			children = (
+				15552F4D21779C2F00305CF1 /* Utilities */,
 				15552F1D217752A000305CF1 /* Environment.swift */,
 				15552F1B2177520300305CF1 /* GraphQL.swift */,
 				OBJ_9 /* GraphQLContainerType.swift */,
@@ -204,7 +214,7 @@
 				OBJ_14 /* GraphQLOrders.swift */,
 				OBJ_15 /* GraphQLParameter.swift */,
 				OBJ_16 /* GraphQLPredicates.swift */,
-				OBJ_17 /* GraphQLQuery.swift */,
+				OBJ_17 /* GraphQLOperation.swift */,
 				OBJ_18 /* GraphQLReferenceType.swift */,
 				OBJ_19 /* GraphQLScalarType.swift */,
 				OBJ_20 /* GraphQLTypedField.swift */,
@@ -279,7 +289,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_26 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -307,7 +317,7 @@
 				OBJ_40 /* GraphQLParameter.swift in Sources */,
 				15552F1C2177520300305CF1 /* GraphQL.swift in Sources */,
 				OBJ_41 /* GraphQLPredicates.swift in Sources */,
-				OBJ_42 /* GraphQLQuery.swift in Sources */,
+				OBJ_42 /* GraphQLOperation.swift in Sources */,
 				OBJ_43 /* GraphQLReferenceType.swift in Sources */,
 				OBJ_44 /* GraphQLScalarType.swift in Sources */,
 				OBJ_45 /* GraphQLTypedField.swift in Sources */,
@@ -328,6 +338,7 @@
 			buildActionMask = 0;
 			files = (
 				15552F2E217753DE00305CF1 /* FieldTests.swift in Sources */,
+				15684DC22178924300AA0AF7 /* GraphQLOperationTests.swift in Sources */,
 				15552F33217754BA00305CF1 /* Collection+Append.swift in Sources */,
 				15552F27217753DE00305CF1 /* TypedFieldTests.swift in Sources */,
 				15552F29217753DE00305CF1 /* ValueTypeTests.swift in Sources */,

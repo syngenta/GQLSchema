@@ -77,7 +77,7 @@ private final class TestInput: GraphQLInputType {
     func _representationParameters() -> [GraphQLParameter] {
         var parameters: [GraphQLParameter] = []
         
-        parameters += GraphQLParameter(name: "name", value: self.name)
+        parameters += [GraphQLParameter(name: "name", value: self.name)]
         
         if let email = self.email {
             parameters += GraphQLParameter(name: "email", value: email)
