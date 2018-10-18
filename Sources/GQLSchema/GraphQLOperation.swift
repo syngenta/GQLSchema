@@ -12,8 +12,8 @@ public enum GraphQLOperationType {
 }
 
 public struct GraphQLFragmentQuery {
-    let name: String
-    let body: String
+    public let name: String
+    public let body: String
     
     init<Fragment: GraphQLFragment>(fragment: Fragment) {
         self.name = fragment.name
@@ -37,12 +37,12 @@ public struct GraphQLQuery: GraphQLOperation {
     public private(set) var body: String
     public private(set) var fragmentQuery: GraphQLFragmentQuery?
     
-    init<Fragment: GraphQLFragment>(body: String, fragment: Fragment) {
+    public init<Fragment: GraphQLFragment>(body: String, fragment: Fragment) {
         self.body = body
         self.fragmentQuery = GraphQLFragmentQuery(fragment: fragment)
     }
     
-    init(body: String) {
+    public init(body: String) {
         self.body = body
         self.fragmentQuery = nil
     }
@@ -57,12 +57,12 @@ public struct GraphQLMutation: GraphQLOperation {
     public private(set) var body: String
     public private(set) var fragmentQuery: GraphQLFragmentQuery?
     
-    init<Fragment: GraphQLFragment>(body: String, fragment: Fragment) {
+    public init<Fragment: GraphQLFragment>(body: String, fragment: Fragment) {
         self.body = body
         self.fragmentQuery = GraphQLFragmentQuery(fragment: fragment)
     }
     
-    init(body: String) {
+    public init(body: String) {
         self.body = body
         self.fragmentQuery = nil
     }
