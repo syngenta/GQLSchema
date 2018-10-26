@@ -21,7 +21,6 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		15552F1C2177520300305CF1 /* GraphQL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15552F1B2177520300305CF1 /* GraphQL.swift */; };
 		15552F1E217752A000305CF1 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15552F1D217752A000305CF1 /* Environment.swift */; };
 		15552F27217753DE00305CF1 /* TypedFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15552F1F217753DD00305CF1 /* TypedFieldTests.swift */; };
 		15552F28217753DE00305CF1 /* InlineFragmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15552F20217753DD00305CF1 /* InlineFragmentTests.swift */; };
@@ -73,7 +72,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		15552F1B2177520300305CF1 /* GraphQL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphQL.swift; sourceTree = "<group>"; };
 		15552F1D217752A000305CF1 /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		15552F1F217753DD00305CF1 /* TypedFieldTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypedFieldTests.swift; sourceTree = "<group>"; };
 		15552F20217753DD00305CF1 /* InlineFragmentTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InlineFragmentTests.swift; sourceTree = "<group>"; };
@@ -205,7 +203,6 @@
 			children = (
 				15552F4D21779C2F00305CF1 /* Utilities */,
 				15552F1D217752A000305CF1 /* Environment.swift */,
-				15552F1B2177520300305CF1 /* GraphQL.swift */,
 				OBJ_9 /* GraphQLContainerType.swift */,
 				OBJ_10 /* GraphQLField.swift */,
 				OBJ_11 /* GraphQLFragment.swift */,
@@ -315,7 +312,6 @@
 				OBJ_38 /* GraphQLInputType.swift in Sources */,
 				OBJ_39 /* GraphQLOrders.swift in Sources */,
 				OBJ_40 /* GraphQLParameter.swift in Sources */,
-				15552F1C2177520300305CF1 /* GraphQL.swift in Sources */,
 				OBJ_41 /* GraphQLPredicates.swift in Sources */,
 				OBJ_42 /* GraphQLOperation.swift in Sources */,
 				OBJ_43 /* GraphQLReferenceType.swift in Sources */,

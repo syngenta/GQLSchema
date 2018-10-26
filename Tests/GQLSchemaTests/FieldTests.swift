@@ -38,10 +38,9 @@ class FieldTests: XCTestCase {
     func testFieldWithAlias() {
         let node = GraphQLField(name: "issues", alias: "someIssue")
         
-        let alias = "someIssue".aliasPrefixed
+        let alias = "someIssue"
         XCTAssertEqual(node._name, "issues")
         XCTAssertEqual(node._alias, alias)
-        XCTAssert(alias.hasAliasPrefix)
     }
     
     func testEnqueueAlias() {
@@ -58,7 +57,7 @@ class FieldTests: XCTestCase {
         
         XCTAssertEqual(firstChild._name, "subfield")
         XCTAssertNotNil(firstChild._alias)
-        XCTAssertEqual(firstChild._alias, "test".aliasPrefixed)
+        XCTAssertEqual(firstChild._alias, "test")
         
         XCTAssertEqual(secondChild._name, "anotherSubfield")
         XCTAssertNil(secondChild._alias)
@@ -223,8 +222,8 @@ class FieldTests: XCTestCase {
             "    issues {" ~
             "        edges {" ~
             "            node {" ~
-            "                \(GraphQL.Custom.aliasPrefix)smallImage: image(size: 125)" ~
-            "                \(GraphQL.Custom.aliasPrefix)largeImage: image(size: 1024)" ~
+            "                smallImage: image(size: 125)" ~
+            "                largeImage: image(size: 1024)" ~
             "            }" ~
             "        }" ~
             "    }" ~

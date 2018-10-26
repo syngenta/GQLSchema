@@ -22,27 +22,43 @@ public struct GraphQLFragmentQuery {
 }
 
 public protocol GraphQLOperation {
-    var queryType: GraphQLOperationType { get }
+    var type: GraphQLOperationType { get }
+    var name: String { get }
     var body: String { get }
     var fragmentQuery: GraphQLFragmentQuery? { get }
+    init<Fragment: GraphQLFragment>(name: String, body: String, fragment: Fragment)
+    init(name: String, body: String)
+}
+
+public extension GraphQLOperation {
+    public init<Fragment: GraphQLFragment>(field: GraphQLField, fragment: Fragment) {
+        self.init(name: field._name, body: field._graphQLFormat, fragment: fragment)
+    }
+    
+    public init(field: GraphQLField) {
+        self.init(name: field._alias ?? field._name, body: field._graphQLFormat)
+    }
 }
 
 
 public struct GraphQLQuery: GraphQLOperation {
     
-    public var queryType: GraphQLOperationType {
+    public var type: GraphQLOperationType {
         return .query
     }
     
+    public private(set) var name: String
     public private(set) var body: String
     public private(set) var fragmentQuery: GraphQLFragmentQuery?
     
-    public init<Fragment: GraphQLFragment>(body: String, fragment: Fragment) {
+    public init<Fragment: GraphQLFragment>(name: String, body: String, fragment: Fragment) {
+        self.name = name
         self.body = body
         self.fragmentQuery = GraphQLFragmentQuery(fragment: fragment)
     }
     
-    public init(body: String) {
+    public init(name: String, body: String) {
+        self.name = name
         self.body = body
         self.fragmentQuery = nil
     }
@@ -50,19 +66,22 @@ public struct GraphQLQuery: GraphQLOperation {
 
 public struct GraphQLMutation: GraphQLOperation {
     
-    public var queryType: GraphQLOperationType {
+    public var type: GraphQLOperationType {
         return .mutation
     }
     
+    public private(set) var name: String
     public private(set) var body: String
     public private(set) var fragmentQuery: GraphQLFragmentQuery?
     
-    public init<Fragment: GraphQLFragment>(body: String, fragment: Fragment) {
+    public init<Fragment: GraphQLFragment>(name: String, body: String, fragment: Fragment) {
+        self.name = name
         self.body = body
         self.fragmentQuery = GraphQLFragmentQuery(fragment: fragment)
     }
     
-    public init(body: String) {
+    public init(name: String, body: String) {
+        self.name = name
         self.body = body
         self.fragmentQuery = nil
     }

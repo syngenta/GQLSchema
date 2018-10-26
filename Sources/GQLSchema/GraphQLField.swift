@@ -27,8 +27,8 @@ open class GraphQLField: GraphQLContainerType {
     //  MARK: - Init -
     //
     public required init(name: String, alias: String? = nil, parameters: [GraphQLParameter] = [], children: [GraphQLReferenceType]? = nil) {
-        self._name       = name
-        self._alias      = alias?.aliasPrefixed
+        self._name = name
+        self._alias = alias
         self._parameters = parameters
         
         if let children = children {
@@ -40,7 +40,7 @@ open class GraphQLField: GraphQLContainerType {
     //  MARK: - Alias -
     //
     public func alias(_ alias: String) -> Self {
-        self.enquedAlias = alias.aliasPrefixed
+        self.enquedAlias = alias
         return self
     }
     

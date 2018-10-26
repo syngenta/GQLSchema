@@ -22,7 +22,7 @@ class TypedFieldTests: XCTestCase {
         let typedField = node._children[0] as! GraphQLField
         
         XCTAssertEqual(typedField._children.count, 1)
-        XCTAssertEqual(typedField._children[0]._name, GraphQL.Key.typeName)
+        XCTAssertEqual(typedField._children[0]._name, "__typename")
     }
     
     func testAppendedTypenameWithChildren() {
@@ -36,7 +36,7 @@ class TypedFieldTests: XCTestCase {
         let typedField = node._children[0] as! GraphQLField
         
         XCTAssertEqual(typedField._children.count, 3)
-        XCTAssertEqual(typedField._children[0]._name, GraphQL.Key.typeName)
+        XCTAssertEqual(typedField._children[0]._name, "__typename")
         XCTAssertEqual(typedField._children[1]._name, "subfield1")
         XCTAssertEqual(typedField._children[2]._name, "subfield2")
     }
