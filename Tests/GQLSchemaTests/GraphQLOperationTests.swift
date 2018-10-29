@@ -119,4 +119,11 @@ class GraphQLOperationTests: XCTestCase {
         XCTAssertEqual(mutation.fragmentQuery?.name, "TypeFragment")
         XCTAssertEqual(mutation.fragmentQuery?.body, "field\n")
     }
+    
+    func testEquitable() {
+        let query = GraphQLQuery(name: "Name", body: "boby")
+        let query2 = GraphQLQuery(name: "Name", body: "boby")
+
+        XCTAssert(query == query2)
+    }
 }

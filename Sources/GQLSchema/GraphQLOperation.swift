@@ -21,7 +21,7 @@ public struct GraphQLFragmentQuery {
     }
 }
 
-public protocol GraphQLOperation {
+public protocol GraphQLOperation: CustomStringConvertible {
     var type: GraphQLOperationType { get }
     var name: String { get }
     var body: String { get }
@@ -31,6 +31,15 @@ public protocol GraphQLOperation {
 }
 
 public extension GraphQLOperation {
+    
+    public var description: String {
+        return self.body + (self.fragmentQuery?.body ?? "")
+    }
+    
+    public static func == (lhs: Self, rhs: Self) -> Bool {
+        return lhs.description == rhs.description
+    }
+    
     public init<Fragment: GraphQLFragment>(field: GraphQLField, fragment: Fragment) {
         self.init(name: field._name, body: field._graphQLFormat, fragment: fragment)
     }
@@ -39,7 +48,6 @@ public extension GraphQLOperation {
         self.init(name: field._alias ?? field._name, body: field._graphQLFormat)
     }
 }
-
 
 public struct GraphQLQuery: GraphQLOperation {
     
