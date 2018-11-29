@@ -14,12 +14,12 @@ enum GraphQLFieldError: Error {
 
 open class GraphQLField: GraphQLContainerType {
     
-    public var _name:       String
-    public var _alias:      String?
+    public var _name: String
+    public var _alias: String?
     public var _parameters: [GraphQLParameter]
     
-    public var _parent:     GraphQLContainerType?
-    public var _children:  [GraphQLReferenceType] = []
+    public weak var _parent: GraphQLContainerType?
+    public var _children: [GraphQLReferenceType] = []
     
     private var enquedAlias: String?
     
@@ -92,7 +92,7 @@ open class GraphQLField: GraphQLContainerType {
 //
 extension GraphQLField {
     public var _graphQLFormat: String {
-        var representation: String
+        var representation = ""
         
         if let alias = self._alias {
             representation = "\(self._indent)\(alias): \(self._name)"
@@ -103,19 +103,20 @@ extension GraphQLField {
         if !self._parameters.isEmpty {
             let keyValues      = self._parameters.map { $0._graphQLFormat }
             let keyValueString = keyValues.joined(separator: " ")
-            representation    += "(\(keyValueString))"
+            
+            representation.append("(\(keyValueString))")
         }
         
         if !self._children.isEmpty {
-            let children       = self._children.map { $0._graphQLFormat }
-            let joinedChildren = children.joined()
-            
-            representation += "\(self._space){\(self._newline)"
-            representation += joinedChildren
-            representation += "\(self._indent)}"
+            representation.append(self._space)
+            representation = representation + "{"
+            representation.append(self._newline)
+            let children = self._children.map { $0._graphQLFormat }
+            representation.append(children.joined())
+            representation.append(self._indent + "}")
         }
         
-        representation += self._newline
+        representation.append(self._newline)
         
         return representation
     }
