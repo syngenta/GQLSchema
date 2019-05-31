@@ -18,17 +18,17 @@ public protocol GraphQLFragment: CustomStringConvertible {
 
 public extension GraphQLFragment {
     
-    public static var defaultName: String {
+    static var defaultName: String {
         return Self.typeName + "Fragment"
     }
     
-    public init(name: String = Self.defaultName, _ buildOn: (Field) -> Void) {
+    init(name: String = Self.defaultName, _ buildOn: (Field) -> Void) {
         let field = Field(name: "fragment \(name) on \(Self.typeName)", parameters: [])
         buildOn(field)
         self = Self.init(name: name, field: field)
     }
     
-    public var description: String {
+    var description: String {
         return self.field._graphQLFormat
     }
 }

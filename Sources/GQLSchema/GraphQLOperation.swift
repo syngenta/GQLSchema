@@ -32,19 +32,19 @@ public protocol GraphQLOperation: CustomStringConvertible {
 
 public extension GraphQLOperation {
     
-    public var description: String {
+    var description: String {
         return self.body + (self.fragmentQuery?.body ?? "")
     }
     
-    public static func == (lhs: Self, rhs: Self) -> Bool {
+    static func == (lhs: Self, rhs: Self) -> Bool {
         return lhs.description == rhs.description
     }
     
-    public init<Fragment: GraphQLFragment>(field: GraphQLField, fragment: Fragment) {
+    init<Fragment: GraphQLFragment>(field: GraphQLField, fragment: Fragment) {
         self.init(name: field._name, body: field._graphQLFormat, fragment: fragment)
     }
     
-    public init(field: GraphQLField) {
+    init(field: GraphQLField) {
         self.init(name: field._alias ?? field._name, body: field._graphQLFormat)
     }
 }
