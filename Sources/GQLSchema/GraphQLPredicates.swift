@@ -65,30 +65,6 @@ public enum GraphQLPredicates {
     /// is not null
     case not_null(_ value: Bool, key: String)
     
-    public func predicate(property: String) -> (property: String, value: Any) {
-        let key = property + "_"
-        switch self {
-        case .eq(let value, _): return (key + "eq", value)
-        case .not_eq(let value, _): return (key + "not_eq", value)
-        case .matches(let value, _): return (key + "matches", value)
-        case .does_not_match(let value, _): return (key + "does_not_match", value)
-        case .lt(let value, _): return (key + "lt", value)
-        case .lteq(let value, _): return (key + "lteq", value)
-        case .gt(let value, _): return (key + "gt", value)
-        case .gteq(let value, _): return (key + "gteq", value)
-        case .in(let value, _): return (key + "in", value)
-        case .not_in(let value, _): return (key + "not_in", value)
-        case .cont(let value, _): return (key + "cont", value)
-        case .not_cont(let value, _): return (key + "not_cont", value)
-        case .start(let value, _): return (key + "start", value)
-        case .not_start(let value, _): return (key + "not_start", value)
-        case .end(let value, _): return (key + "end", value)
-        case .not_end(let value, _): return (key + "not_end", value)
-        case .null(let value, _): return (key + "null", value ? "true" : "false")
-        case .not_null(let value, _): return (key + "not_null", value ? "true" : "false")
-        }
-    }
-    
     func value(_ value: Any, key: String, code: String) -> String {
         if let value = value as? String {
             return "\\\"\(key)_\(code)\\\":\\\"\(value)\\\""
