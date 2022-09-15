@@ -36,6 +36,9 @@
 		15552F372177644A00305CF1 /* PredicatesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15552F362177644A00305CF1 /* PredicatesTests.swift */; };
 		15552F39217769C300305CF1 /* OrdersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15552F38217769C300305CF1 /* OrdersTests.swift */; };
 		15684DC22178924300AA0AF7 /* GraphQLOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15684DC12178924300AA0AF7 /* GraphQLOperationTests.swift */; };
+		15FB3EC228D3664E00DD72C0 /* GraphQLValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FB3EC128D3664E00DD72C0 /* GraphQLValue.swift */; };
+		15FB3EC428D3771D00DD72C0 /* GraphQLVariable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FB3EC328D3771D00DD72C0 /* GraphQLVariable.swift */; };
+		15FB3EC628D3782D00DD72C0 /* VariableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FB3EC528D3782C00DD72C0 /* VariableTests.swift */; };
 		OBJ_34 /* GraphQLContainerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* GraphQLContainerType.swift */; };
 		OBJ_35 /* GraphQLField.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* GraphQLField.swift */; };
 		OBJ_36 /* GraphQLFragment.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* GraphQLFragment.swift */; };
@@ -87,6 +90,9 @@
 		15552F362177644A00305CF1 /* PredicatesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredicatesTests.swift; sourceTree = "<group>"; };
 		15552F38217769C300305CF1 /* OrdersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersTests.swift; sourceTree = "<group>"; };
 		15684DC12178924300AA0AF7 /* GraphQLOperationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLOperationTests.swift; sourceTree = "<group>"; };
+		15FB3EC128D3664E00DD72C0 /* GraphQLValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLValue.swift; sourceTree = "<group>"; };
+		15FB3EC328D3771D00DD72C0 /* GraphQLVariable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLVariable.swift; sourceTree = "<group>"; };
+		15FB3EC528D3782C00DD72C0 /* VariableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariableTests.swift; sourceTree = "<group>"; };
 		"GQLSchema::GQLSchema::Product" /* GQLSchema.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GQLSchema.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"GQLSchema::GQLSchemaTests::Product" /* GQLSchemaTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = GQLSchemaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_10 /* GraphQLField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLField.swift; sourceTree = "<group>"; };
@@ -164,6 +170,7 @@
 				15552F34217758EC00305CF1 /* FragmentTests.swift */,
 				15552F362177644A00305CF1 /* PredicatesTests.swift */,
 				15552F38217769C300305CF1 /* OrdersTests.swift */,
+				15FB3EC528D3782C00DD72C0 /* VariableTests.swift */,
 				15684DC12178924300AA0AF7 /* GraphQLOperationTests.swift */,
 				OBJ_25 /* XCTestManifests.swift */,
 			);
@@ -210,8 +217,10 @@
 				OBJ_13 /* GraphQLInputType.swift */,
 				OBJ_14 /* GraphQLOrders.swift */,
 				OBJ_15 /* GraphQLParameter.swift */,
+				15FB3EC128D3664E00DD72C0 /* GraphQLValue.swift */,
 				OBJ_16 /* GraphQLPredicates.swift */,
 				OBJ_17 /* GraphQLOperation.swift */,
+				15FB3EC328D3771D00DD72C0 /* GraphQLVariable.swift */,
 				OBJ_18 /* GraphQLReferenceType.swift */,
 				OBJ_19 /* GraphQLScalarType.swift */,
 				OBJ_20 /* GraphQLTypedField.swift */,
@@ -284,6 +293,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = OBJ_5;
@@ -309,6 +319,7 @@
 				OBJ_36 /* GraphQLFragment.swift in Sources */,
 				OBJ_37 /* GraphQLInlineFragment.swift in Sources */,
 				15552F1E217752A000305CF1 /* Environment.swift in Sources */,
+				15FB3EC428D3771D00DD72C0 /* GraphQLVariable.swift in Sources */,
 				OBJ_38 /* GraphQLInputType.swift in Sources */,
 				OBJ_39 /* GraphQLOrders.swift in Sources */,
 				OBJ_40 /* GraphQLParameter.swift in Sources */,
@@ -317,6 +328,7 @@
 				OBJ_43 /* GraphQLReferenceType.swift in Sources */,
 				OBJ_44 /* GraphQLScalarType.swift in Sources */,
 				OBJ_45 /* GraphQLTypedField.swift in Sources */,
+				15FB3EC228D3664E00DD72C0 /* GraphQLValue.swift in Sources */,
 				OBJ_46 /* GraphQLValueType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,6 +352,7 @@
 				15552F29217753DE00305CF1 /* ValueTypeTests.swift in Sources */,
 				15552F28217753DE00305CF1 /* InlineFragmentTests.swift in Sources */,
 				15552F2C217753DE00305CF1 /* InputTypeTests.swift in Sources */,
+				15FB3EC628D3782D00DD72C0 /* VariableTests.swift in Sources */,
 				15552F312177546300305CF1 /* String+Newline.swift in Sources */,
 				OBJ_65 /* XCTestManifests.swift in Sources */,
 				15552F39217769C300305CF1 /* OrdersTests.swift in Sources */,

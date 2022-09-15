@@ -53,6 +53,22 @@ class ParameterTests: XCTestCase {
         self.assert(parameter: GraphQLParameter(name: "enums", value: [TestEnum.two, TestEnum.three]),
                     equals:    "enums: [2two, 3three]")
     }
+
+    func testGraphQLValueParameters() {
+        let values = [
+            TestID(from: "123"),
+            TestID(from: "234"),
+        ]
+        self.assert(
+            parameter: GraphQLParameter(name: "ids", value: GraphQLValue.value(values)),
+            equals: "ids: [\"123\", \"234\"]"
+        )
+
+        self.assert(
+            parameter: GraphQLParameter(name: "ids", value: GraphQLValue<[TestID]>.variable("ids")),
+            equals: "ids: $ids"
+        )
+    }
     
     private func assert(parameter: GraphQLParameter, equals value: String) {
         let string = parameter._graphQLFormat
@@ -80,6 +96,7 @@ class ParameterTests: XCTestCase {
         ("testScalarTypeCollectionInit", testScalarTypeCollectionInit),
         ("testEnumInit", testEnumInit),
         ("testEnumCollectionInit", testEnumCollectionInit),
+        ("testGraphQLValueParameters", testGraphQLValueParameters),
         ("testEquality", testEquality),
     ]
 }

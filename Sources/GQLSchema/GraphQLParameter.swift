@@ -9,10 +9,10 @@
 import Foundation
 
 public struct GraphQLParameter: GraphQLValueType {
-    
+
     fileprivate let _name:  String
     fileprivate let _value: String
-    
+
     // ----------------------------------
     //  MARK: - Init -
     //
@@ -20,43 +20,30 @@ public struct GraphQLParameter: GraphQLValueType {
         self._name  = name
         self._value = finalValue
     }
-    
-    public init(name: String, value: GraphQLValueType) {
+
+    public init<T: GraphQLValueType>(name: String, value: T) {
         self.init(name: name, finalValue: value._graphQLFormat)
     }
-    
-    public init(name: String, value: [GraphQLValueType]) {
-        let values      = value.map { $0._graphQLFormat }
-        let valueString = values.joined(separator: ", ")
-        
-        self.init(name: name, finalValue: "[\(valueString)]")
+
+    public init<T: GraphQLValueType>(name: String, value: [T]) {
+        self.init(name: name, finalValue: value._graphQLFormat)
     }
-    
-    public init(name: String, value: GraphQLScalarType) {
-        self.init(name: name, value: value.string)
-    }
-    
-    public init(name: String, value: [GraphQLScalarType]) {
-        self.init(name: name, value: value.map { $0.string })
-    }
-    
+
     public init<T>(name: String, value: T) where T: RawRepresentable, T.RawValue == String {
         self.init(name: name, finalValue: value.rawValue)
     }
-    
+
     public init<T>(name: String, value: [T]) where T: RawRepresentable, T.RawValue == String {
         let values      = value.map { $0.rawValue }
         let valueString = values.joined(separator: ", ")
-        
+
         self.init(name: name, finalValue: "[\(valueString)]")
     }
-    
+
     // ----------------------------------
     //  MARK: - GraphQLValueType -
     //
-    public var _graphQLFormat: String {
-        return "\(self._name): \(self._value)"
-    }
+    public var _graphQLFormat: String { "\(self._name): \(self._value)" }
 }
 
 // ----------------------------------

@@ -58,6 +58,14 @@ extension Bool: GraphQLValueType {
     }
 }
 
+extension Array: GraphQLValueType where Element: GraphQLValueType {
+    public var _graphQLFormat: String {
+        let values = self.map { $0._graphQLFormat }
+        let valueString = values.joined(separator: ", ")
+        return "[\(valueString)]"
+    }
+}
+
 extension RawRepresentable where RawValue == String {
     public var _stringRepresentation: String {
         return "\(self.rawValue)"
