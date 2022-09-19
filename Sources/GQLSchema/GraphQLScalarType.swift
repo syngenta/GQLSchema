@@ -8,9 +8,11 @@
 
 import Foundation
 
-public protocol GraphQLScalarType {
-    
+public protocol GraphQLScalarType: GraphQLValueType {
     var string: String { get }
-    
     init(from string: String)
+}
+
+public extension GraphQLScalarType {
+    var _graphQLFormat: String { self.string._graphQLFormat }
 }

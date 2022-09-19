@@ -164,6 +164,70 @@ class FieldTests: XCTestCase {
             ""
         )
     }
+
+    func testFieldsWithChildrenWithValue() {
+
+        let root = GraphQLField(name: "query", children: [
+            GraphQLField(name: "issues", parameters: [
+                GraphQLParameter(name: "first", value: GraphQLValue<Int>.value(30)),
+            ], children: [
+                GraphQLField(name: "edges", children: [
+                    GraphQLField(name: "node", children: [
+                        GraphQLField(name: "id"),
+                        GraphQLField(name: "title"),
+                    ])
+                ])
+            ])
+        ])
+
+        let query = root._graphQLFormat
+
+        XCTAssertEqual(query, "" ~
+            "query {" ~
+            "    issues(first: 30) {" ~
+            "        edges {" ~
+            "            node {" ~
+            "                id" ~
+            "                title" ~
+            "            }" ~
+            "        }" ~
+            "    }" ~
+            "}" ~
+            ""
+        )
+    }
+
+    func testFieldsWithChildrenWithVariable() {
+
+        let root = GraphQLField(name: "query", children: [
+            GraphQLField(name: "issues", parameters: [
+                GraphQLParameter(name: "first", value: GraphQLValue<Int>.variable("variable")),
+            ], children: [
+                GraphQLField(name: "edges", children: [
+                    GraphQLField(name: "node", children: [
+                        GraphQLField(name: "id"),
+                        GraphQLField(name: "title"),
+                    ])
+                ])
+            ])
+        ])
+
+        let query = root._graphQLFormat
+
+        XCTAssertEqual(query, "" ~
+            "query {" ~
+            "    issues(first: $variable) {" ~
+            "        edges {" ~
+            "            node {" ~
+            "                id" ~
+            "                title" ~
+            "            }" ~
+            "        }" ~
+            "    }" ~
+            "}" ~
+            ""
+        )
+    }
     
     func testFieldsWithoutChildren() {
         
@@ -238,6 +302,8 @@ class FieldTests: XCTestCase {
         ("testEnqueueAlias", testEnqueueAlias),
         ("testEnqueueInvalidAlias", testEnqueueInvalidAlias),
         ("testFieldWithParameters", testFieldWithParameters),
+        ("testFieldsWithChildrenWithValue", testFieldsWithChildrenWithValue),
+        ("testFieldsWithChildrenWithVariable", testFieldsWithChildrenWithVariable),
         ("testFieldWithChildren", testFieldWithChildren),
         ("testParentWhenInitializingWithChild", testParentWhenInitializingWithChild),
         ("testParentWhenAddingChild", testParentWhenAddingChild),

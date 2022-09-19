@@ -11,6 +11,7 @@ public func allTests() -> [XCTestCaseEntry] {
         testCase(ReferenceTypeTests.allTests),
         testCase(TypedFieldTests.allTests),
         testCase(ValueTypeTests.allTests),
+        testCase(VariableTests.allTests)
     ]
 }
 #endif
