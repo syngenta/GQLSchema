@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		15521CCB28E7492000956B6F /* GraphQLFileType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15521CCA28E7492000956B6F /* GraphQLFileType.swift */; };
 		15552F1E217752A000305CF1 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15552F1D217752A000305CF1 /* Environment.swift */; };
 		15552F27217753DE00305CF1 /* TypedFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15552F1F217753DD00305CF1 /* TypedFieldTests.swift */; };
 		15552F28217753DE00305CF1 /* InlineFragmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15552F20217753DD00305CF1 /* InlineFragmentTests.swift */; };
@@ -75,6 +76,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		15521CCA28E7492000956B6F /* GraphQLFileType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLFileType.swift; sourceTree = "<group>"; };
 		15552F1D217752A000305CF1 /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		15552F1F217753DD00305CF1 /* TypedFieldTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypedFieldTests.swift; sourceTree = "<group>"; };
 		15552F20217753DD00305CF1 /* InlineFragmentTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InlineFragmentTests.swift; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 				OBJ_19 /* GraphQLScalarType.swift */,
 				OBJ_20 /* GraphQLTypedField.swift */,
 				OBJ_21 /* GraphQLValueType.swift */,
+				15521CCA28E7492000956B6F /* GraphQLFileType.swift */,
 			);
 			name = GQLSchema;
 			path = Sources/GQLSchema;
@@ -325,6 +328,7 @@
 				OBJ_40 /* GraphQLParameter.swift in Sources */,
 				OBJ_41 /* GraphQLPredicates.swift in Sources */,
 				OBJ_42 /* GraphQLOperation.swift in Sources */,
+				15521CCB28E7492000956B6F /* GraphQLFileType.swift in Sources */,
 				OBJ_43 /* GraphQLReferenceType.swift in Sources */,
 				OBJ_44 /* GraphQLScalarType.swift in Sources */,
 				OBJ_45 /* GraphQLTypedField.swift in Sources */,

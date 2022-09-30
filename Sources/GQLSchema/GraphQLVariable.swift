@@ -9,9 +9,9 @@ import Foundation
 
 /// Struct for GraphQL variable
 public struct GraphQLVariable {
-    let type: String
-    let name: String
-    let value: GraphQLValueType
+    public let type: String
+    public let name: String
+    public let value: GraphQLValueType
 
     /// Initialiser
     /// - Parameters:

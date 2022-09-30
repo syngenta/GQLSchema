@@ -65,9 +65,3 @@ extension Array: GraphQLValueType where Element: GraphQLValueType {
         return "[\(valueString)]"
     }
 }
-
-extension RawRepresentable where RawValue == String {
-    public var _stringRepresentation: String {
-        return "\(self.rawValue)"
-    }
-}
