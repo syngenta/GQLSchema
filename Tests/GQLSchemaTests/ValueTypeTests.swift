@@ -41,19 +41,7 @@ class ValueTypeTests: XCTestCase {
         let anotherValue = false
         XCTAssertEqual(anotherValue._graphQLFormat, "false")
     }
-    
-    func testRawStringEnum() {
-        
-        enum Dog: String {
-            case husky
-            case rottweiler = "rotty"
-            case dachshund
-        }
-        
-        XCTAssertEqual(Dog.husky._stringRepresentation, "husky")
-        XCTAssertEqual(Dog.rottweiler._stringRepresentation, "rotty")
-    }
-    
+
     // ----------------------------------
     //  MARK: - Equality -
     //
@@ -74,7 +62,6 @@ class ValueTypeTests: XCTestCase {
         ("testFloat", testFloat),
         ("testDouble", testDouble),
         ("testBool", testBool),
-        ("testRawStringEnum", testRawStringEnum),
         ("testEquality", testEquality),
     ]
 }

@@ -11,10 +11,12 @@ import XCTest
 
 class ParameterTests: XCTestCase {
     
-    private enum TestEnum: String {
+    private enum TestEnum: String, GraphQLValueType {
         case one   = "1one"
         case two   = "2two"
         case three = "3three"
+
+        var _graphQLFormat: String { self.rawValue }
     }
     
     // ----------------------------------

@@ -29,17 +29,6 @@ public struct GraphQLParameter: GraphQLValueType {
         self.init(name: name, finalValue: value._graphQLFormat)
     }
 
-    public init<T>(name: String, value: T) where T: RawRepresentable, T.RawValue == String {
-        self.init(name: name, finalValue: value.rawValue)
-    }
-
-    public init<T>(name: String, value: [T]) where T: RawRepresentable, T.RawValue == String {
-        let values      = value.map { $0.rawValue }
-        let valueString = values.joined(separator: ", ")
-
-        self.init(name: name, finalValue: "[\(valueString)]")
-    }
-
     // ----------------------------------
     //  MARK: - GraphQLValueType -
     //
