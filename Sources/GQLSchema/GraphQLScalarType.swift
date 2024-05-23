@@ -10,7 +10,7 @@ import Foundation
 
 public protocol GraphQLScalarType: GraphQLValueType {
     var string: String { get }
-    init(from string: String)
+    init(from string: String) throws
 }
 
 public extension GraphQLScalarType {
