@@ -9,7 +9,7 @@
 import Foundation
 
 public final class GraphQLInlineFragment: GraphQLContainerType {
-    
+
     public var _name:          String
     public var _typeCondition: String
     public var _parameters:    [GraphQLParameter]

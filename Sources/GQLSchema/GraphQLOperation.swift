@@ -6,12 +6,12 @@
 //  Copyright © 2018 Evgeny Kalashnikov. All rights reserved.
 //
 
-public enum GraphQLOperationType {
+public enum GraphQLOperationType: Codable {
     case query
     case mutation
 }
 
-public struct GraphQLFragmentQuery {
+public struct GraphQLFragmentQuery: Codable {
     public let name: String
     public let body: String
     
@@ -21,7 +21,7 @@ public struct GraphQLFragmentQuery {
     }
 }
 
-public protocol GraphQLOperation: CustomStringConvertible {
+public protocol GraphQLOperation: CustomStringConvertible, Codable {
     var type: GraphQLOperationType { get }
     var name: String { get }
     var body: String { get }
@@ -50,7 +50,7 @@ public extension GraphQLOperation {
 }
 
 public struct GraphQLQuery: GraphQLOperation {
-    
+
     public var type: GraphQLOperationType {
         return .query
     }
@@ -73,7 +73,7 @@ public struct GraphQLQuery: GraphQLOperation {
 }
 
 public struct GraphQLMutation: GraphQLOperation {
-    
+
     public var type: GraphQLOperationType {
         return .mutation
     }
@@ -92,5 +92,47 @@ public struct GraphQLMutation: GraphQLOperation {
         self.name = name
         self.body = body
         self.fragmentQuery = nil
+    }
+}
+
+public struct GraphQLOperationCodableBox: Codable {
+    public let operation: GraphQLOperation
+
+    enum CodingKeys: String, CodingKey {
+        case type
+        case operation
+    }
+
+    public init(operation: GraphQLOperation) {
+        self.operation = operation
+    }
+
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        switch operation {
+        case let operation as GraphQLQuery:
+            try container.encode(GraphQLOperationType.query, forKey: .type)
+            try container.encode(operation, forKey: .operation)
+        case let operation as GraphQLMutation:
+            try container.encode(GraphQLOperationType.mutation, forKey: .type)
+            try container.encode(operation, forKey: .operation)
+        default:
+            let context = EncodingError.Context(
+                codingPath: encoder.codingPath,
+                debugDescription: "Unsupported GraphQLOperation type"
+            )
+            throw EncodingError.invalidValue(operation, context)
+        }
+    }
+
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        let type = try container.decode(GraphQLOperationType.self, forKey: .type)
+        switch type {
+        case .query:
+            self.operation = try container.decode(GraphQLQuery.self, forKey: .operation)
+        case .mutation:
+            self.operation = try container.decode(GraphQLMutation.self, forKey: .operation)
+        }
     }
 }
