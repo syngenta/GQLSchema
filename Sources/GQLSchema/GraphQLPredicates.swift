@@ -74,8 +74,23 @@ public enum GraphQLPredicates {
             return "\\\"\(key)_\(code)\\\":\(value)"
         } else if let value = value as? Bool {
             return "\\\"\(key)_\(code)\\\":\(value ? "true" : "false")"
-        } else if let value = value as? [Any] {
-            return "\\\"\(key)_\(code)\\\":\(value)"
+        } else if let array = value as? [Any] {
+            let items = array.map { item -> String in
+                if let str = item as? String {
+                    return "\\\"\(str)\\\""
+                } else if let num = item as? Int {
+                    return "\(num)"
+                } else if let num = item as? Double {
+                    return "\(num)"
+                } else if let num = item as? Float {
+                    return "\(num)"
+                } else if let bool = item as? Bool {
+                    return bool ? "true" : "false"
+                } else {
+                    return "\\\"\(item)\\\""
+                }
+            }.joined(separator: ", ")
+            return "\\\"\(key)_\(code)\\\":[\(items)]"
         }
         return "\\\"\(key)_\(code)\\\":\(value)"
     }
