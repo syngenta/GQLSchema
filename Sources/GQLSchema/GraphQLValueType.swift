@@ -65,3 +65,15 @@ extension Array: GraphQLValueType where Element: GraphQLValueType {
         return "[\(valueString)]"
     }
 }
+
+extension Optional: GraphQLValueType where Wrapped: GraphQLValueType {
+
+    public var _graphQLFormat: String {
+        switch self {
+        case .none:
+            "null"
+        case .some(let wrapped):
+            wrapped._graphQLFormat
+        }
+    }
+}
