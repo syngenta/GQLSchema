@@ -11,7 +11,7 @@ import Foundation
 public enum GraphQLValue<T: GraphQLValueType>: GraphQLValueType {
 
     /// Represents GraphQL literal `null` (explicitly sends `null` as the argument value).
-    /// Note: this is not Swift `nil` — use it when you need to override a default value or clear an optional field.
+    /// Note: this is not Swift `nil` — use this when you explicitly need to send a NULL value in order to override the current value of an optional field.
     case null
 
     /// can be specified only with value that has realisation of protocol *GraphQLValueType*
